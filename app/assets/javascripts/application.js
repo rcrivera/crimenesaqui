@@ -12,5 +12,30 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+//= require angular
+//= require angular-route
+//= require angular-resource
+//= require_self
+//= require_tree ./services
+//= require_tree ./filters
+//= require_tree ./controllers
+//= require_tree ./directives
+
+var ngApp = angular.module('CrimenesAqui', ['ngRoute']);
+
+ngApp.config(['$routeProvider', function($routeProvider) {
+	$routeProvider.
+	when('/', {
+		templateUrl: 'assets/index.html',
+		controller: 'IndexController'
+	}).
+	otherwise({
+		redirectTo: '/'
+	});
+}]);
+
+ngApp.config([
+  "$httpProvider", function(provider) {
+    return provider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content');
+  }
+]);
