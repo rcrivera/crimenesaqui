@@ -43,3 +43,5 @@ end
 
 gem 'mongoid', github: 'mongoid/mongoid'
 gem 'bson_ext'
+
+gem 'rails_12factor', group: :production
