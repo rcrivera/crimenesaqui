@@ -10,4 +10,9 @@
  *
  *= require_self
  *= require_tree .
+ *= require bootstrap.min.css
+ *= require font-awesome.min.css
+ *= require leaflet.css
+ *= require L.Control.Sidebar.css
+ *= require main.css
  */

@@ -20,6 +20,11 @@
 //= require_tree ./filters
 //= require_tree ./controllers
 //= require_tree ./directives
+//= require bootstrap.min.js
+//= require typeahead.bundle.min.js
+//= require leaflet.js
+//= require L.Control.Sidebar.js
+//= require main.js
 
 var ngApp = angular.module('CrimenesAqui', ['ngRoute']);
 
